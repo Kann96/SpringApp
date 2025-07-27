@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SpringAnimation
 
-class ViewController: UIViewController {
+class SpringViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
