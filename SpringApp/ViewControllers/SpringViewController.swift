@@ -8,13 +8,17 @@
 import UIKit
 import SpringAnimation
 
-class SpringViewController: UIViewController {
+final class SpringViewController: UIViewController {
 
+    @IBOutlet var springAnimationView: SpringView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func springAnimationButton(_ sender: SpringButton) {
+    }
+    
 }
 
