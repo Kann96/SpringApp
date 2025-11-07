@@ -9,15 +9,34 @@ import UIKit
 import SpringAnimation
 
 final class SpringViewController: UIViewController {
-
+    
     @IBOutlet var springAnimationView: SpringView!
+    @IBOutlet var infoLabel: UILabel!
+    
+    private let animations = Animation.getAnimation()
+    private var animationsIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func springAnimationButton(_ sender: SpringButton) {
+        let currentAnimation = animations[animationsIndex]
+        
+        springAnimationView.animation = currentAnimation.animationsName
+        
+        springAnimationView.curve = currentAnimation.animationCurve
+        springAnimationView.force = currentAnimation.animationForce
+        springAnimationView.duration = currentAnimation.animationDuration
+        springAnimationView.delay = currentAnimation.animationDelay
+        springAnimationView.animate()
+        
+        infoLabel.text = currentAnimation.fullNameAnimations
+        
+        sender.setTitle(currentAnimation.animationsName, for: .normal)
+        sender.animate()
+        
+        animationsIndex = (animationsIndex + 1) % animations.count
     }
     
 }
