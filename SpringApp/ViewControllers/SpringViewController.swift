@@ -12,15 +12,23 @@ final class SpringViewController: UIViewController {
     
     @IBOutlet var springAnimationView: SpringView!
     @IBOutlet var infoLabel: UILabel!
+    @IBOutlet var nextButton: SpringButton!
     
     private let animations = Animation.getAnimation()
     private var animationsIndex = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard !animations.isEmpty else {return}
+        
+        let textButton = (animationsIndex + 1) % animations.count
+        nextButton.setTitle(animations[textButton].animationsName, for: .normal)
+        
+        let textLabel = animations[animationsIndex]
+        infoLabel.text = textLabel.animationsName
     }
-
-    @IBAction func springAnimationButton(_ sender: SpringButton) {
+        @IBAction func springAnimationButton(_ sender: SpringButton) {
         let currentAnimation = animations[animationsIndex]
         
         springAnimationView.animation = currentAnimation.animationsName
@@ -32,8 +40,10 @@ final class SpringViewController: UIViewController {
         springAnimationView.animate()
         
         infoLabel.text = currentAnimation.fullNameAnimations
+            
+        let nextIndex = (animationsIndex + 1) % animations.count
         
-        sender.setTitle(currentAnimation.animationsName, for: .normal)
+        sender.setTitle(animations[nextIndex].animationsName, for: .normal)
         sender.animate()
         
         animationsIndex = (animationsIndex + 1) % animations.count

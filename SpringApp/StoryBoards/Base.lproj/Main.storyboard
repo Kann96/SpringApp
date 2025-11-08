@@ -45,7 +45,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyS-nA-DjL">
-                                <rect key="frame" x="130" y="457" width="133" height="20.333333333333314"/>
+                                <rect key="frame" x="90" y="457" width="213" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,16 +57,17 @@
                             <constraint firstItem="WIM-Mb-MiU" firstAttribute="width" secondItem="PgN-hf-ncr" secondAttribute="width" id="6GR-fh-g9P"/>
                             <constraint firstItem="PgN-hf-ncr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="Bg9-Ya-KbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PgN-hf-ncr" secondAttribute="trailing" constant="65" id="Oio-px-I85"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gyS-nA-DjL" secondAttribute="trailing" constant="130" id="RYs-I8-iLa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gyS-nA-DjL" secondAttribute="trailing" constant="90" id="RYs-I8-iLa"/>
                             <constraint firstItem="WIM-Mb-MiU" firstAttribute="top" secondItem="gyS-nA-DjL" secondAttribute="bottom" constant="141.00000000000006" id="gfh-gv-pqh"/>
                             <constraint firstItem="WIM-Mb-MiU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hOo-S7-mWh"/>
-                            <constraint firstItem="gyS-nA-DjL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="m22-bg-pn0"/>
+                            <constraint firstItem="gyS-nA-DjL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="m22-bg-pn0"/>
                             <constraint firstItem="PgN-hf-ncr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="ong-kw-ifX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WIM-Mb-MiU" secondAttribute="bottom" multiplier="1.2" id="tIU-b6-IM4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="infoLabel" destination="gyS-nA-DjL" id="TB1-SI-KfN"/>
+                        <outlet property="nextButton" destination="WIM-Mb-MiU" id="KZp-9B-vux"/>
                         <outlet property="springAnimationView" destination="PgN-hf-ncr" id="yWZ-F7-v3A"/>
                     </connections>
                 </viewController>

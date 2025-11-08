@@ -17,7 +17,12 @@ struct Animation {
     let animationDelay: CGFloat
     
     var fullNameAnimations: String {
-        String(format: "%@ %@  force: %.2f  duration: %.2f  delay: %.2f", animationsName, animationCurve, animationForce, animationDuration, animationDelay)
+        String(format: """
+            animation: %@  
+            force: %.2f  
+            duration: %.2f  
+            delay: %.2f"
+            """, animationsName, animationCurve, animationForce, animationDuration, animationDelay)
     }
 }
 
